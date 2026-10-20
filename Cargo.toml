@@ -1,0 +1,41 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/plexus-core",
+    "crates/plexus-fec",
+    "crates/plexus-scheduler",
+    "crates/plexus-tun",
+    "crates/plexus-cli",
+    "crates/plexus-server",
+    "crates/plexus-lossy-proxy",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "MIT OR Apache-2.0"
+authors = ["plexus-net"]
+repository = "https://github.com/plexus-net/plexus"
+
+[workspace.dependencies]
+sysinfo = "0.30"
+tokio = { version = "1.40", features = ["full"] }
+serde = { version = "1", features = ["derive"] }
+serde_yaml = "0.9"
+anyhow = "1"
+thiserror = "1"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+bytes = "1"
+rand = "0.8"
+clap = { version = "4", features = ["derive"] }
+zstd = "0.13"
+reed-solomon-erasure = "6"
+socket2 = "0.5"
+ratatui = "0.29"
+crossterm = "0.28"
+
+[profile.release]
+lto = "thin"
+codegen-units = 1
+strip = true

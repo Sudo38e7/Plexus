@@ -1,0 +1,25 @@
+[package]
+name = "plexus-cli"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[[bin]]
+name = "plexus"
+path = "src/main.rs"
+
+[dependencies]
+plexus-core = { path = "../plexus-core" }
+plexus-fec = { path = "../plexus-fec" }
+plexus-scheduler = { path = "../plexus-scheduler" }
+clap.workspace = true
+tokio.workspace = true
+anyhow.workspace = true
+tracing.workspace = true
+tracing-subscriber.workspace = true
+rand.workspace = true
+bytes.workspace = true
+socket2.workspace = true
+ratatui.workspace = true
+sysinfo.workspace = true
+crossterm.workspace = true

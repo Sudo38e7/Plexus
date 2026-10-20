@@ -1,0 +1,18 @@
+[package]
+name = "plexus-lossy-proxy"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[[bin]]
+name = "plexus-lossy-proxy"
+path = "src/main.rs"
+
+[dependencies]
+tokio.workspace = true
+anyhow.workspace = true
+tracing.workspace = true
+tracing-subscriber.workspace = true
+rand.workspace = true
+clap.workspace = true
+socket2.workspace = true

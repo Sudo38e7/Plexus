@@ -1,0 +1,9 @@
+[package]
+name = "plexus-scheduler"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+plexus-core = { path = "../plexus-core" }
+tracing.workspace = true
